@@ -1,13 +1,62 @@
-body {
+/*
+===============================================================
+****************************OUTLINE****************************
+===============================================================
+# Presets
+# Variables
+# Body
+# General Elements Styling
+# Page Container
+===============================================================
+*/
+
+/********* # PRESETS *********/
+*, ::before, ::after {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+
+/********* # VARIABLES *********/
+:root {
+  --heading-colour: #102A42;
+  --heading-spacing: 0.1rem;
+  --text-white: #F1F5F8;
+  --text-grey: #617d98;
+  --text-gold: #C59D5F;
+  --bg-white: #F1F5F8;
+  --bg-gold: #C59D5F;
+  --bg-grey: #617d98;
+  --border-radius: 0.25rem;
+}
+
+
+/********* # BODY *********/
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/********* # GENERAL ELEMENTS STYLING *********/
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-colour);
+  letter-spacing: var(--heading-spacing);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+
+/********* # PAGE CONTAINER *********/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-white);
 }
